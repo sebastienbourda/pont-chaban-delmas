@@ -4,17 +4,22 @@
 
 <template>
   <div class="about">
-    <h3>This website let you know if the bridge Jacques Chaban Delmas (Bordeaux, France) will be closed in the day.</h3>
+    <p>This website let you know if the bridge Jacques Chaban Delmas will
+    be closed or not during the day.</p>
+    <p>It use <a href="https://opendata.bordeaux-metropole.fr/pages/accueil/" target="_blank">Bordeaux Open Data</a> to find informations.</p>
+    <p>It was created by <a href="">Sebastien Bourda</a>, Freelance Creative Developer based in Bordeaux, France.</p>
   </div>
   <Footer></Footer>
 </template>
 
 <style>
-/* @media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    max-width: 90%;
   }
-} */
+  p {
+    font-size: 3rem;
+  }
+  a:hover {
+    border-bottom: 2px solid;
+  }
 </style>
