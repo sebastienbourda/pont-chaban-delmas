@@ -1,19 +1,30 @@
 @import "./base.css";
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
+  color: var(--color-status);
+}
+
+ul {
+  list-style: none;
+}
+
+ul.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 h1 {
@@ -21,8 +32,36 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+footer {
+  gap: 50px;
+}
+
 .status {
   color: var(--color-status);
+  font-weight: 700;
 }
 
 @media (max-width: 390px) {
