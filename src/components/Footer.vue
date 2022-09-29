@@ -1,21 +1,20 @@
 <script>
-
 </script>
 
 <template>
   <footer>
-    <h2>14:34</h2>
-    <span class="line"></span>
-    <h4>Aviva</h4>
-    <span class="line"></span>
-    <h2>15:34</h2>
+    <h5>© Sebastien Bourda - 2022</h5>
+    <ul class="menu">
+      <li>
+        <RouterLink to="/">twitter</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/about">github</RouterLink>
+      </li>
+    </ul>
   </footer>
 </template>
 
 <style>
-  .line {
-    border-bottom: 1px solid #000;
-    height: 1px;
-    flex-grow: 1;
-  }
+
 </style>
