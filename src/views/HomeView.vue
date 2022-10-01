@@ -1,3 +1,6 @@
+<script setup>
+import dayjs from 'dayjs';
+</script>
 <script>
 const API_URL = `https://opendata.bordeaux-metropole.fr/api/records/1.0/search/?dataset=previsions_pont_chaban&q=&lang=fr&rows=1000&sort=-date_passage&facet=bateau`
 export default {
@@ -29,11 +32,10 @@ export default {
     },
     currentDateTime() {
       const current = new Date();
-      const date = current.getFullYear() + '-' + '0' + (current.getMonth()+1) + '-' + current.getDate();
+      console.log(this.formatDate(current))
+      const date = current.getFullYear() + '-' + (current.getMonth()+1) + '-' + current.getDate();
       const time = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-      const dateTime = date + ' ' + time;
-      this.timestamp = dateTime;
-      this.current_date = date;
+      this.current_date = this.formatDate(date);
     },
     checkOpening(datas) {
       datas.forEach(passage => {
@@ -52,6 +54,11 @@ export default {
           this.isHide = false
         }, 700)
       }
+    },
+    formatDate(dateString) {
+      const date = dayjs(dateString);
+      // Then specify how you want your dates to be formatted
+      return date.format('YYYY-MM-DD');
     }
   }
 }
