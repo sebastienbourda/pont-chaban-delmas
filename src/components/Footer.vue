@@ -6,14 +6,14 @@ export default {
     }
   },
   created() {
-    this.animeHeader()
+    this.animeFooter()
   },
   methods: {
-    animeHeader() {
+    animeFooter() {
       // this.isActive = false
       setTimeout(() => {
         this.isHide = false
-      }, 700)
+      }, 1200)
     }
   }
 }
@@ -44,8 +44,15 @@ export default {
   footer {
     transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     min-height: 100px;
+    justify-content: space-between;
   }
   .footer-hide {
-    transform: translatey(120%);
+    transform: translateY(120%);
+  }
+  @media (max-width: 800px) {
+    footer {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 </style>

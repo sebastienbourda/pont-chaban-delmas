@@ -2,25 +2,31 @@
 export default {
   data() {
     return {
-      isHide: true
+      isHide: true,
+      currentPage: ""
     }
   },
-  created() {
-    this.animeHeader()
+  mounted() {
+    this.animeHeader(),
+    this.currentPage = window.location.pathname,
+    this.displayCurrentPage()
   },
   methods: {
     animeHeader() {
       // this.isActive = false
       setTimeout(() => {
         this.isHide = false
-      }, 700)
+      }, 1600)
+    },
+    displayCurrentPage() {
+      console.log(this.currentPage)
     }
   }
 }
 </script>
 
 <template>
-  <header :class="{ 'header-hide': isHide }">
+  <header :class="{ 'header-hide': isHide }" >
     <h5>PONT CHABAN DELMAS</h5>
     <ul class="menu">
       <li>
