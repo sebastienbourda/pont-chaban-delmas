@@ -23,4 +23,10 @@
   a:hover {
     border-bottom: 2px solid;
   }
+
+  @media (max-width: 800px) {
+    p {
+      font-size: 1rem;
+    }
+  }
 </style>
