@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       isHide: true,
+      isActive: false,
       currentPage: ""
     }
   },
@@ -45,5 +46,29 @@ export default {
   }
   .header-hide {
     transform: translatey(-200%);
+  }
+  .router-link-active {
+    padding-bottom: 5px;
+  }
+  .router-link-active::after {
+    content: '';
+    border-bottom: 3px solid var(--vt-c-red);
+    width: 20px;
+    display: block;
+  }
+  .menu a:not(.router-link-active)::after{
+    content: '';
+    border-bottom: 3px solid var(--vt-c-red);
+    opacity: 0;
+    width: 20px;
+    display: block;
+    transition: all 300ms ease-in-out;
+  }
+  .menu a:not(.router-link-active):hover::after {
+    content: '';
+    border-bottom: 3px solid var(--vt-c-red);
+    width: 100%;
+    display: block;
+    opacity: 1;
   }
 </style>
