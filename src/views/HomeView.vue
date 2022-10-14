@@ -41,7 +41,7 @@ export default {
     },
     checkOpening(data) {
       data.forEach(passage => {
-        if (passage.fields.date_passage === this.test_date) {
+        if (passage.fields.date_passage === this.current_date) {
           this.status = "Closed"
           this.passage_infos.push(passage.fields)
         }
