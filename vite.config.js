@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://www.pontchabandelmas.info',
+  base: '/pont-chaban-delmas/',
   plugins: [vue()],
   resolve: {
     alias: {
