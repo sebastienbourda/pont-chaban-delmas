@@ -41,7 +41,7 @@ export default {
     },
     checkOpening(data) {
       data.forEach(passage => {
-        if (passage.fields.date_passage === this.current_date) {
+        if (passage.fields.date_passage === this.cur_date) {
           this.status = "Closed"
           this.passage_infos.push(passage.fields)
         }
@@ -73,7 +73,7 @@ export default {
 
 <template>
   <main>
-    <h1 v-if="status === 'Open'">The bridge will be <span class="status">{{ status }}.</span></h1>
+    <h1 v-if="status === 'Open'">The bridge will remain <span class="status">{{ status }}</span> today.</h1>
     <h1 v-else>The bridge will be <span class="status">{{ status }}</span>.</h1>
   </main>
   <div :class="[{ 'infos-hide': isHide }, 'infos']">
