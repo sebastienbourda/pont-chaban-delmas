@@ -27,11 +27,11 @@ export default {
         <a href="mailto:sebastienbourda@icloud.com">Mail</a>
       </li>
       <li>
-        <a href="www.linkedin.com/in/sebastien-bourda
+        <a href="https://www.linkedin.com/in/sebastien-bourda
 " target="_blank">LinkedIn</a>
       </li>
       <li>
-        <a href="/">twitter</a>
+        <a href="https://twitter.com/SebastienBourda" target="_blank">twitter</a>
       </li>
       <li>
         <a href="https://github.com/sebastienbourda/pont-chaban-delmas" target="_blank">github</a>
